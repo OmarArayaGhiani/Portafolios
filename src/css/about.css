@@ -1,0 +1,155 @@
+@keyframes expand {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.about-grid,
+.about-flex {
+    height: 80vh;
+    padding: 0px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.icon {
+    color: whitesmoke;
+    font-size: 100px;
+    width: 20%;
+}
+
+.icon-flex {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.no-hidden-section,
+.hidden-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-reverse {
+    flex-direction: row-reverse;
+}
+
+.p-about,
+.p-none {
+    width: 80%;
+    color: whitesmoke;
+    font-size: 25px;
+    text-align: justify;
+    margin: 0px;
+}
+
+.resp-about,
+.about-grid button,
+.about-flex button {
+    display: none;
+}
+
+@media (max-width: 576px) {
+
+    .about-animation {
+        animation: expand;
+        animation-duration: 0.5s;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+    }
+
+    .about-animation-none{
+        animation: none;
+    }
+
+    .about-grid {
+        height: 100%;
+        padding: 30px;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        text-align: center;
+        gap: 60px 20px;
+    }
+
+    .about-flex {
+        width: 100%;
+        padding: 30px;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .p-none {
+        display: none;
+    }
+
+    .p-about {
+        width: 70%;
+        color: whitesmoke;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .p-tittle {
+        color: whitesmoke;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .resp-about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-grid button,
+    .about-flex button {
+        display: block;
+        width: 80px;
+        padding: 10px 0px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .icon {
+        font-size: 60px;
+        width: auto;
+    }
+
+    .icon-flex {
+        width: auto;
+    }
+
+    .centered-element {
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    .no-hidden-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hidden-section {
+        display: none;
+    }
+}

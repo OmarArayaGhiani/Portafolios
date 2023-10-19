@@ -1,0 +1,42 @@
+.home {
+    padding: 0px 100px;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img-home {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+}
+
+.p-home {
+    color: whitesmoke;
+    font-size: 30px;
+    margin: 10px 0px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 576px) {
+    .home {
+        flex-direction: column-reverse;
+    }
+
+    .img-home {
+        width: 300px;
+        height: 300px;
+    }
+
+    .p-home {
+        text-align: center;
+    }
+}

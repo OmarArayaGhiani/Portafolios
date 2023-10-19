@@ -1,0 +1,140 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    padding: 20px 50px;
+    height: 10%;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.no-hidden-menu,
+.hidden-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.link-home {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.link {
+    color: whitesmoke;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.link:hover {
+    font-weight: bolder;
+}
+
+.active {
+    font-weight: bolder;
+    color: whitesmoke
+}
+
+.no-hidden-button,
+.hidden-button {
+    visibility: hidden;
+    display: block;
+    border: none;
+    font-size: 30px;
+}
+
+.menu-close {
+    display: none;
+}
+
+@media (max-width: 576px) {
+
+    @keyframes show {
+        0% {
+            opacity: 0;
+        }
+
+        25% {
+            opacity: 0.25;
+        }
+
+        50% {
+            opacity: 0.5;
+        }
+
+        75% {
+            opacity: 0.75;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .no-hidden-button {
+        visibility: visible;
+        display: block;
+        background: none;
+        border: none;
+        font-size: 30px;
+        color: whitesmoke;
+        cursor: pointer;
+        animation-name: show;
+        animation-duration: 0.5s;
+        animation-delay: 0.2s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+
+    }
+
+    .menu-close {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 25px;
+        color: whitesmoke;
+        cursor: pointer;
+        padding: 20px;
+        text-align: end;
+        font-weight: bold;
+    }
+
+    .hidden-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        text-align: end;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 25%;
+        height: 20%;
+        background-color: rgba(51, 51, 51, 0.7);
+        transition: left 0.5s ease;
+        border-bottom-left-radius: 20px;
+    }
+
+    .no-hidden-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        text-align: end;
+        position: fixed;
+        top: 0;
+        left: 75%;
+        width: 25%;
+        height: 20%;
+        background-color: rgba(51, 51, 51, 0.7);
+        transition: left 0.5s ease;
+        border-bottom-left-radius: 20px;
+        z-index: 1;
+    }
+
+    .link {
+        margin-bottom: 10px;
+    }
+}
