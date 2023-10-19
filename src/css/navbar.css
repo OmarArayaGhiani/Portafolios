@@ -8,8 +8,13 @@
     height: 10%;
 }
 
+.d-flex{
+    display: flex;
+}
+
 h1 {
     font-size: 20px;
+    margin-left: 27px;
 }
 
 .no-hidden-menu,
@@ -73,6 +78,10 @@ h1 {
         100% {
             opacity: 1;
         }
+    }
+
+    h1{
+        margin-left: 0px;
     }
 
     .no-hidden-button {

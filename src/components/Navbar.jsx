@@ -32,35 +32,37 @@ const NavBar = () => {
       <NavLink to="/home" className={`${setActiveClass}`}>
         <h1 onClick={closeMenu}>Sergio Araya Ghiani</h1>
       </NavLink>
-      <div className={`${hiddenMenu}`}>
-        <button className="menu-close" onClick={closeMenu}>
-          X
+      <div className="d-flex">
+        <div className={`${hiddenMenu}`}>
+          <button className="menu-close" onClick={closeMenu}>
+            X
+          </button>
+          <NavLink
+            to="/about"
+            className={`${setActiveClass} link`}
+            onClick={closeMenu}
+          >
+            Sobre mí
+          </NavLink>
+          <NavLink
+            to="/proyects"
+            className={`${setActiveClass} link`}
+            onClick={closeMenu}
+          >
+            Proyectos
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={`${setActiveClass} link`}
+            onClick={closeMenu}
+          >
+            Contácto
+          </NavLink>
+        </div>
+        <button className={`${hiddenButton}`} onClick={changeClass}>
+          ☰
         </button>
-        <NavLink
-          to="/about"
-          className={`${setActiveClass} link`}
-          onClick={closeMenu}
-        >
-          Sobre mí
-        </NavLink>
-        <NavLink
-          to="/proyects"
-          className={`${setActiveClass} link`}
-          onClick={closeMenu}
-        >
-          Proyectos
-        </NavLink>
-        <NavLink
-          to="/contact"
-          className={`${setActiveClass} link`}
-          onClick={closeMenu}
-        >
-          Contácto
-        </NavLink>
       </div>
-      <button className={`${hiddenButton}`} onClick={changeClass}>
-        ☰
-      </button>
     </div>
   )
 }
